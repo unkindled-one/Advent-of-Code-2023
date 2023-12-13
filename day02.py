@@ -38,7 +38,7 @@ def part1(data: list[str]) -> None:
                     break
         if is_possible:
             total += i + 1
-    print(f"Part 1 total: {total}")
+    print(f'Total for part 1: {total}')
 
 
 def part2(data: list[str]) -> None:
@@ -59,7 +59,7 @@ def part2(data: list[str]) -> None:
                     max_green = int(color[0])
         total += max_red * max_green * max_blue
 
-    print(f'Part 2 total: {total}')
+    print(f'Total for part 2: {total}')
 
 
 def main() -> None:
