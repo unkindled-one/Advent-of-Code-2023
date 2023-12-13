@@ -55,6 +55,6 @@ def main() -> None:
     part2(data)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
 

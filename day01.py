@@ -33,11 +33,11 @@ def part2(data: list[str]) -> None:
 
 
 def main() -> None:
-    data: list[str] = read_lines("input/day01")
+    data: list[str] = read_lines('input/day01')
     part1(data)
     part2(data) # not 53888, 57500, or 53896, 53651
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
 
