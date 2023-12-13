@@ -1,6 +1,7 @@
 from util import read_lines
 import re
 
+
 def check_surrounding(data: list[str], row: int, col: int) -> bool:
     """Checks all positions around a given index for nonsymbols."""
     non_symbols = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.']
@@ -11,8 +12,7 @@ def check_surrounding(data: list[str], row: int, col: int) -> bool:
     return False
 
 
-
-def part1(data: list[str]):
+def part1(data: list[str]) -> None:
     # Scan around the numbers instead of the symbols because it avoids overcounting
     total = 0
     number_regex = re.compile(r'\d+')
@@ -27,8 +27,7 @@ def part1(data: list[str]):
     print(f'Total for part 1: {total}')
 
 
-
-def part2(data: list[str]):
+def part2(data: list[str]) -> None:
     total = 0
     number_regex = re.compile(r'\d+')
     all_numbers = [list(re.finditer(number_regex, s)) for s in data]
@@ -56,11 +55,13 @@ def part2(data: list[str]):
     print(f'Total for part 2: {total}')
 
 
-def main():
+def main() -> None:
     data: list[str] = read_lines('input/day03')    
     # data: list[str] = read_lines('input/day03_practice')    
     part1(data)
     part2(data)
 
+
 if __name__ == "__main__":
     main() 
+

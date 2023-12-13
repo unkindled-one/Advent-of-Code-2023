@@ -1,7 +1,7 @@
-from util import readlines
+from util import read_lines
 
 
-def part1(data: list[str]):
+def part1(data: list[str]) -> None:
     total = 0
     for line in data:
         new_line: str = ''.join(list(filter(lambda x: x.isnumeric(), line)))
@@ -10,7 +10,7 @@ def part1(data: list[str]):
     print(f'Total for part 1: {total}')
     
 
-def part2(data: list[str]):
+def part2(data: list[str]) -> None:
     mapping = {
         'one': 'o1e',
         'two': 't2o',
@@ -32,10 +32,12 @@ def part2(data: list[str]):
     print(f'Total for part 2: {total}')
 
 
-def main():
-    data: list[str] = readlines("input/day01")
+def main() -> None:
+    data: list[str] = read_lines("input/day01")
     part1(data)
     part2(data) # not 53888, 57500, or 53896, 53651
 
+
 if __name__ == "__main__":
     main()
+

@@ -1,5 +1,6 @@
 from util import read_lines
 
+
 def parse(data: list[str]) -> list[list[list[str]]]:
     """Parse the data into an easier form to work with."""
     parsed_data = []
@@ -17,7 +18,7 @@ def parse(data: list[str]) -> list[list[list[str]]]:
     return parsed_data
 
 
-def part1(data: list[str]):
+def part1(data: list[str]) -> None:
     total = 0
     max_amounts = {
         'red': 12,
@@ -40,7 +41,7 @@ def part1(data: list[str]):
     print(f"Part 1 total: {total}")
 
 
-def part2(data: list[str]):
+def part2(data: list[str]) -> None:
     final_input = parse(data)
     total = 0
     for round in final_input:
@@ -61,9 +62,7 @@ def part2(data: list[str]):
     print(f'Part 2 total: {total}')
 
 
-
-
-def main():
+def main() -> None:
     # data: list[str] = read_lines('input/day02_practice')
     data: list[str] = read_lines('input/day02')
     part1(data)
@@ -72,3 +71,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
